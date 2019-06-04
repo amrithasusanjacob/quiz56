@@ -12,7 +12,16 @@ public class quiz56sol {
 	}
    public static String studying(String name)
    {
-	  String s= name+" is studying";
-	  return s;
+	  String n="null";
+	  if(name.equals(n))
+	  {
+		  String s1="Nobody is studying";
+	      return s1;
+	  }
+	  else
+	  {
+		 String s= name+" is studying";
+		 return s;
+	  }
    }
 }

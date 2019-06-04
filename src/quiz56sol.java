@@ -1,19 +1,19 @@
-import java.util.Scanner;
+
 
 public class quiz56sol {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner obj = new Scanner(System.in);
-		System.out.println("Enter the name");
-		String name=obj.nextLine();
+		String name=null;
        String r= studying(name);
        System.out.println(r);
+       String name1="Shivam";
+       String r1= studying(name1);
+       System.out.println(r1);
 	}
    public static String studying(String name)
    {
-	  String n="null";
-	  if(name.equals(n))
+	  
+	  if(name==null)
 	  {
 		  String s1="Nobody is studying";
 	      return s1;

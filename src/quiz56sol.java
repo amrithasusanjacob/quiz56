@@ -3,39 +3,28 @@
 public class quiz56sol {
 
 	public static void main(String[] args) {
-		String name="SHIVAM";
+	   String name="sivam,romil";
        String r= studying(name);
        System.out.println(r);
-       String name1="shivam";
+       String name1="joan,Carolini";
        String r1= studying(name1);
        System.out.println(r1);
 	}
    public static String studying(String name)
    {
 	   int l=name.length();
-	   int c=0;
+	   int pos=0;
 	   for(int i=0;i<l;i++)
 	   {
-		   if((name.charAt(i)>='A')&&(name.charAt(i)<='Z'))
+		   if(name.charAt(i)==',')
 		   {
-			   c=1;
-		   }
-		   else
-		   {
-			   c=0;
-		   }
+			   pos=i;
+		   }		   
 	   }
-	   System.out.println(c);
-	  if(c==1)
-	  {
-		  String s1=name+" IS STUDYING";
-	      return s1;
-	  }
-	  else
-	  {
-		 String s= name+" is studying";
-		 return s;
-	  }
-	  
+	  String s1=name.substring(0,pos);
+	  String s2=name.substring(pos+1,l);
+	  String s3 = s1+" and "+s2+" are studying";
+	  return s3;
+
    }
 }
